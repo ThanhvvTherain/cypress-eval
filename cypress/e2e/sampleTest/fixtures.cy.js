@@ -3,7 +3,7 @@ const Form_URL = '/#sign-in'
 const Fixtures_URL = '/fixtures'
 require('cypress-xpath')
 
-describe('test for home page', () => {
+describe('test for fixtures page', () => {
   let exampleData;
   before(() => {
     cy.visit(Cypress.config().baseUrl+Fixtures_URL+Form_URL)

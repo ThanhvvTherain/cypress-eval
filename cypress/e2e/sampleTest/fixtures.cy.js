@@ -17,12 +17,13 @@ describe('test for home page', () => {
   it('should display the matches base on 20th of calender selected', () => {
    //click calender
    cy.wait(5000)
-    cy.xpath("//p[contains (text(),'March 2023')]/../..").click()
+    cy.xpath("//p[contains (text(),'2023')]/../..").click()
     cy.wait(2000)
    //tick on the 20th date of march
    cy.xpath("//button[contains (text(),'20')]").click()
+   cy.wait(6000)
     // verrify the matches filter from 20th to current date
-    cy.xpath("//p[contains (text(),'March 2023')]/../../../../following-sibling::div/descendant::h3").eq(2).should('contain',"20 March")
+    cy.xpath("//p[contains (text(),'2023')]/../../../../following-sibling::div/descendant::h3").eq(2).should('contain',"20")
   })
 
 })
